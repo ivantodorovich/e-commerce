@@ -1,0 +1,26 @@
+.price_filter_main {
+    .irs--flat .irs-bar {
+        background-color: theme-color("primary");
+    }
+
+    .irs--flat .irs-handle > i:first-child {
+        background-color: theme-color("primary");
+    }
+
+    .irs--flat .irs-handle.state_hover > i:first-child,
+    .irs--flat .irs-handle:hover > i:first-child {
+        background-color: darken(theme-color("primary"), 10%);
+    }
+
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single {
+        background-color: theme-color("primary");
+    }
+
+    .irs--flat .irs-from:before,
+    .irs--flat .irs-to:before,
+    .irs--flat .irs-single:before {
+        border-top-color: theme-color("primary");
+    }
+}

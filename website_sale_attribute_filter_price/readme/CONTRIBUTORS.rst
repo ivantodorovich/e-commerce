@@ -2,3 +2,4 @@
 
   * Alexandre D. Díaz
 * Manuel Márquez <buzondemam@gmail.com>
+* Iván Todorovich <ivan.todorovich@gmail.com>

@@ -1,7 +1,7 @@
 # Copyright 2019 Tecnativa - Sergio Teruel
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
-    "name": "Website Sale Attribute Filter Category",
+    "name": "Website Sale Product Attribute Filter Category",
     "summary": "Allow group attributes in shop by categories",
     "version": "14.0.1.0.0",
     "development_status": "Stable",
@@ -15,6 +15,6 @@
     "data": [
         "views/assets.xml",
         "views/templates.xml",
-        "views/website_sale_attribute_filter_category_view.xml",
+        "views/product_attribute_category.xml",
     ],
 }

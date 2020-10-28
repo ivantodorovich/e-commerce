@@ -3,7 +3,7 @@
 from odoo.tests.common import HttpCase
 
 
-class WebsiteSaleAttributeFilterCategoryHttpCase(HttpCase):
+class WebsiteSaleProductAttributeFilterCategoryHttpCase(HttpCase):
     def setUp(self):
         super().setUp()
         # Models
@@ -59,7 +59,7 @@ class WebsiteSaleAttributeFilterCategoryHttpCase(HttpCase):
         """Test frontend tour."""
         tour = (
             "odoo.__DEBUG__.services['web_tour.tour']",
-            "website_sale_attribute_filter_category",
+            "website_sale_product_attribute_filter_category",
         )
         self.browser_js(
             url_path="/",

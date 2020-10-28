@@ -4,12 +4,12 @@
         <xpath expr=".">
             <script
                 type="text/javascript"
-                src="/website_sale_attribute_filter_category/static/src/js/website_sale_attribute_filter_category_tour.js"
+                src="/website_sale_product_attribute_filter_category/static/src/js/website_sale_product_attribute_filter_category_tour.js"
             />
             <link
                 type="text/css"
                 rel="stylesheet"
-                href="/website_sale_attribute_filter_category/static/src/scss/website_sale_attribute_filter_category.scss"
+                href="/website_sale_product_attribute_filter_category/static/src/scss/website_sale_product_attribute_filter_category.scss"
             />
         </xpath>
     </template>

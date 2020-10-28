@@ -1,16 +1,28 @@
-.attrib-category-radio {
-    margin: 0 20px;
-}
+#wsale_products_attributes_collapse {
+    .o_shop_collapse_attribute_filter {
+        padding: 2px 0;
 
-/* Display ">" icon for collapsed elements */
-[data-toggle="collapse"] .fas:before {
-    content: "\f105";
-}
+        /* Remove style="margin" on checkboxes labels, they don't play nice here */
+        ul > li > label {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
 
-[aria-expanded="true"] .fas:before {
-    content: "\f107";
-}
+        /* Simulate same styles than eCommerce Categories list */
+        li a {
+            text-decoration: none !important;
+            span {
+                padding: 4px 3px;
+            }
+        }
 
-[data-toggle="collapse"].collapsed .fas:before {
-    content: "\f105";
+        /* Display ">" icon for collapsed elements */
+        [data-toggle="collapse"] .fas:before {
+            content: "\f054";
+        }
+
+        [aria-expanded="true"] .fas:before {
+            content: "\f078";
+        }
+    }
 }

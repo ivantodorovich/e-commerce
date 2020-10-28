@@ -5,6 +5,8 @@
     <template
         id="products_attributes"
         inherit_id="website_sale.products_attributes"
+        customize_show="True"
+        name="Product Attribute's Filters Categories"
         priority="9999"
     >
         <xpath expr="//form/ul" position="replace">

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="products_attributes_count"
+        inherit_id="website_sale.products_attributes"
+        customize_show="True"
+        name="Show Product Count"
+    >
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'select'&quot;]//t[@t-foreach='a.value_ids']/option"
+            position="attributes"
+        >
+            <attribute name="t-esc">
+                "%s (%s)" % (v.name, attrib_values_count.get(v.id, 0))
+            </attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'radio'&quot;]//t[@t-foreach='a.value_ids']/li//label"
+            position="inside"
+        >
+            <span
+                class="attribute-variant-count"
+                t-esc="attrib_values_count.get(v.id, 0)"
+            />
+        </xpath>
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'color'&quot;]//t[@t-foreach='a.value_ids']//input"
+            position="attributes"
+        >
+            <attribute name="t-att-title">
+                "%s (%s)" % (v.name, attrib_values_count.get(v.id, 0))
+            </attribute>
+        </xpath>
+    </template>
+    <template
+        id="products_attributes_existing"
+        inherit_id="website_sale.products_attributes"
+        customize_show="True"
+        name="Hide Unavailable Values"
+    >
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'select'&quot;]//t[@t-foreach='a.value_ids']/option"
+            position="attributes"
+        >
+            <attribute name="t-if">attrib_values_count.get(v.id)</attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'radio'&quot;]//t[@t-foreach='a.value_ids']/li"
+            position="attributes"
+        >
+            <attribute name="t-if">attrib_values_count.get(v.id)</attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-if=&quot;a.display_type == 'color'&quot;]//t[@t-foreach='a.value_ids']/label"
+            position="attributes"
+        >
+            <attribute name="t-if">attrib_values_count.get(v.id)</attribute>
+        </xpath>
+    </template>
+</odoo>

@@ -8,6 +8,7 @@
     "category": "Website",
     "website": "https://github.com/OCA/e-commerce",
     "author": "Tecnativa, Odoo Community Association (OCA)",
+    "maintainers": ["ivantodorovich"],
     "license": "AGPL-3",
     "application": False,
     "installable": True,
